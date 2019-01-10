@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<meta http-equiv="content-type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+
+
+	<script type="text/javascript" src="./external.js">
+		alert('E ae fera');
+		
+		var variable = 'variable value';
+
+		console.write(variable);
+
+		if (condition) {
+			alert('condition is true');
+		}else{
+			alert('condition is false');
+		}
+
+
+		var condition = 1;
+
+		switch(condition){
+
+			case 1:
+			alert('condition is 1');
+			break;
+			
+			case 2:
+			alert('condition is 2');
+			break;
+
+			case 3:
+			alert('condition is 3');
+			break;
+
+			default:
+			alert('Condition is false');
+
+
+		}
+
+		var counter = 1;
+
+		while(counter<=10){
+			alert('This is a Pop-up Window '+counter);
+
+			counter++;
+		}
+
+		var counter;
+		for(counter = 1; counter<=10; counter++){
+			alert('This is Pop-up Windwo: '+counter);
+		}
+
+		var array = ['first','second','third','fourth'];
+
+		array.length;
+
+		array.push('fourth');
+
+		array.pop()
+		"second"
+
+		array.shift()
+		"first"
+
+		array.unshift('iPhone')
+
+		array.indexOf('banana')
+
+
+		typeof(arra);
+
+		function function_name(arg1,arg2){
+			alert('This first argument is'+arg1);
+			alert('This second argument is'+arg2);
+		}
+
+		function_name('first_arg', 'second_Arg');
+
+		//DOM
+
+		document.write('<b>HTML</b>');
+
+		document.getElementById('first');
+
+		var first = document.getElementById('first');
+
+		var second = document.getElementById('second');
+
+		var p = document.getElementById('p');
+
+		p.innerText = 'New value set by JS';
+
+		var ul = document.getElementById('ul');
+
+		ul.innerHTML = '<li>New list item set by JS</li>';
+
+		var img = document.getElementById('img');
+
+		img.alt = 'new alt val';
+
+		img.src = './image/image2.jpg';
+
+		img.style.border = '3px red solid';
+		img.style.width = '100px';
+
+
+		//Select Class
+		document.querySelector('li');
+
+		document.getElementsByClass('whats');
+
+		document.querySelectorAll('li')[1];
+
+		//Form Validation
+		var email = document.getElementById('email');
+		email.value = 'email set by JS'
+
+		//Child Element
+		var parent = document.getElementById('ul')
+
+		parent.firstElementChild;
+
+		parent.firstChild;
+
+		parent.firstElementChild.nodeType;
+
+		//CreateElement
+		var img = document.createElement('img');
+
+		img.src = './image/image1';
+
+		img.alt = 'This is alt';
+
+		<img>
+
+
+		var ul = document.createElement('ul');
+		ul.innerHTML = '<li>I am a list item</li>';
+
+		var p = document.createElement('p');
+
+		var node = document.createTextNode('i am text node');
+
+		p.appendchild(node);
+			"I am text node";
+
+		//Create whit more freedom
+		var newli = document.createElement('li');
+
+		newli.innerHTML = 'new list item created';
+
+		//Delete element node	
+		var child = document.getElementById('child');
+
+		child.parentElement.removeChild(child);
+
+		//Event
+		var btn = document.getElementById('button');
+		var ul = document.getElementById('ul');
+
+		 function show_hide(){
+			if(ul.style.display == 'none'){
+				ul.style.display='block';
+			}else{
+				ul.style.display='none';
+			}
+		}
+
+		btn.onclick = show_hide();
+
+		//Window Carregada
+		Window.onload = function(){
+			var btn = document.getElementById('button');
+		var ul = document.getElementById('ul');
+
+		 function show_hide(){
+			if(ul.style.display == 'none'){
+				ul.style.display='block';
+			}else{
+				ul.style.display='none';
+			}
+		}
+
+		btn.onclick = show_hide();
+		}
+
+		//EventListener
+		function record(){
+			console.log('List item has been clicked');
+		}
+		var ul = document.getElementById('ul');
+
+		ul.addEventListener('click', record, false);
+
+
+		var first = document.getElementById('first');
+		first.onclick = function(){
+			//var.content = first.innerText;
+
+			var content = event.target.innerText;
+			console.log(content);
+		}
+
+		var uk = document.getElementById('uk');
+		var london = document.getElementById('london');
+
+		function welcome_to_uk(){
+			console.log('welcom to uk');
+		}
+		function welcome_to_london(){
+			console.log('welcom to london');
+			event.stopPropagation();
+		}
+		
+
+
+		uk.addEventListener('click',welcome_to_uk,false);
+
+		london.addEventListener('click',welcome_to_london,false);
+
+	</script>
+
+	<div id="uk">UK
+		<div id="london">London</div>
+	</div>
+
+	<ul id="ul">
+		<li id="first">list item 1</li>
+		<li id="second">list item 2</li>
+		<li>list item 3</li>
+	</ul>
+
+	<p id="p"></p>
+
+	<img id="img" src="./image/image1.jpg" alt="image" title="image-title">
+
+	<input id="button" type="button" name="button">
+
+
+</body>
+</html>
